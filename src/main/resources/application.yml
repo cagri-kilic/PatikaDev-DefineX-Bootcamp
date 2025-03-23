@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: ${APPLICATION_NAME:Advanced Task Manager}
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:your_datasource_url}
+    username: ${SPRING_DATASOURCE_USERNAME:your_datasource_username}
+    password: ${SPRING_DATASOURCE_PASSWORD:your_datasource_password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO:update}
+    show-sql: ${SHOW_SQL:false}
+    properties:
+      hibernate:
+        format_sql: ${FORMAT_SQL:true}
+        dialect: org.hibernate.dialect.MySQLDialect
+  servlet:
+    multipart:
+      max-file-size: ${MAX_FILE_SIZE:5MB}
+      max-request-size: ${MAX_REQUEST_SIZE:5MB}
+
+application:
+  security:
+    token-secret: ${JWT_SECRET:4jL8a2b0N9y1xC7d5F3g6HiJkMnPqRsTuVwXyZABcDeFgHiJkLmNoPqRsTuVwXyZ4b6c8d0EfGh2jKlM}
+    token-expiration-ms: ${TOKEN_EXPIRATION_MS:86400000}
+    token-refresh-expiration-ms: ${TOKEN_REFRESH_EXPIRATION_MS:604800000}
+    jwt-issuer: ${JWT_ISSUER:advanced-task-manager}
+    jwt-audience: ${JWT_AUDIENCE:advanced-task-manager-client}
+  
+  file:
+    upload-dir: ${UPLOAD_DIR:uploads}
+    task-attachments-dir: ${TASK_ATTACHMENTS_DIR:task-attachments}
+    temp-dir: ${TEMP_DIR:temp}
+    max-file-size: ${FILE_MAX_SIZE:5242880}
+  
+logging:
+  level:
+    root: ${LOG_LEVEL_ROOT:INFO}
+    com.patikadev.definex: ${LOG_LEVEL_APP:DEBUG}
+    org.springframework.security: ${LOG_LEVEL_SECURITY:INFO}
+    org.springframework.web: ${LOG_LEVEL_WEB:INFO}
+    org.hibernate: ${LOG_LEVEL_HIBERNATE:INFO} 
