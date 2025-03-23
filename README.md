@@ -1,7 +1,7 @@
 # Advanced Task Manager
 
 ## Overview
-The Advanced Task Manager is a modern, robust task management system built for Lorem Ipsum Corporation. This application replaces the outdated, slow legacy system with a high-performance solution that meets the company's current and future needs. The system enables efficient project management, task tracking, team collaboration, and comprehensive reporting.
+The Advanced Task Manager is a modern, reliable task management system. The system enables efficient project management, task tracking, team collaboration, and comprehensive reporting.
 
 ## Table of Contents
 - [Features](#features)
