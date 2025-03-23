@@ -234,8 +234,7 @@ Tasks follow a strictly defined workflow with the following states:
 
 2. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/advanced-task-manager.git
-   cd advanced-task-manager
+   git clone https://github.com/cagri-kilic/PatikaDev-DefineX-Bootcamp.git
    ```
 
 3. **Configure database**:
