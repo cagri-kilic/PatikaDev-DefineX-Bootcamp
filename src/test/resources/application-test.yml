@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=MySQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        format_sql: true
+    show-sql: false
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: never
+
+application:
+  security:
+    token-secret: 4jL8a2b0N9y1xC7d5F3g6HiJkMnPqRsTuVwXyZABcDeFgHiJkLmNoPqRsTuVwXyZ4b6c8d0EfGh2jKlM
+    token-expiration-ms: 86400000
+    token-refresh-expiration-ms: 604800000
+    jwt-issuer: advanced-task-manager-test
+    jwt-audience: advanced-task-manager-client-test
+  file:
+    upload-dir: test-uploads 
